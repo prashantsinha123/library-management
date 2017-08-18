@@ -1,0 +1,33 @@
+CREATE TABLE `book` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `calln` varchar(40) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `author` varchar(40) NOT NULL,
+  `publisher` varchar(40) NOT NULL,
+  `quantity` int(60) NOT NULL,
+  `issue` int(60) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`) );
+
+
+CREATE TABLE `form` (
+  `id` int(30) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `city` varchar(100) DEFAULT NULL,
+  `contact` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `issue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `calln` varchar(40) NOT NULL,
+  `sid` varchar(40) NOT NULL,
+  `sname` varchar(40) NOT NULL,
+  `scontact` int(10) DEFAULT NULL,
+  `issued_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`));
+
+
+
